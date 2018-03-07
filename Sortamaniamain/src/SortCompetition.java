@@ -37,8 +37,24 @@ public abstract class SortCompetition implements Comparable <SortCompetition> {
 	
 	//Add a custom greeting so your sorter can introduce itself
 	public abstract String greeting();
-	
-	challengeFour()
-
+	// Insertion Sort Helper methods
+	public static void insertionSort(int[]arr)
+	{
+		for(int i = 2; i < arr.length; i++)
+		{
+			int j = i;
+			while((j> 1) && (arr[j-1] > arr[j]))
+			{
+				swapInt(arr,j,j-1);
+				j= j-1;
+			}
+		}
+	}
+	public static void swapInt ( int[]arr, int mama, int mio )
+	{
+		int store = arr[mama];
+		arr[mama]= arr[mio];
+		store = arr[mio];
+	}
 }
 
